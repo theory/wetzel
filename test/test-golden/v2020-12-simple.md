@@ -19,6 +19,13 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 |**metadata**|`object`||No|
 
+**`Image` Pattern Properties**
+
+|   |Type|Description|Required|
+|---|---|---|---|
+|**`/^(?:rgb\|hex\|hsl\|rgba\|hsla)Color/`**|`string`|The background color for the image|No|
+|**`/^(?:height\|width)$/`**|`string`|A dimension for the image|No|
+
 * **Additional properties are allowed.**
 
 ### Image.uri
@@ -87,6 +94,28 @@ An array of three fractional numbers.
         * `camera`
         * `lens`
 
+
+
+### Image.`/^(?:rgb\|hex\|hsl\|rgba\|hsla)Color/`
+
+The background color for the image
+
+* **Type**: `string`
+* **Required**: No
+* **Examples**:
+    * `"rgb(255, 99, 71)"`
+    * `"#ff6347"`
+    * `"hsl(9, 100%, 64%)"`
+
+### Image.`/^(?:height\|width)$/`
+
+A dimension for the image
+
+* **Type**: `string`
+* **Required**: No
+* **Examples**:
+    * `"10"`
+    * `"400px"`
 
 
 ## Examples
